@@ -37,10 +37,10 @@ This architecture follows a modern ELT pattern using dbt for transformation and 
 ┌─────────────────────────┐
 │ Data Models │
 ├─────────────────────────┤
-│ stg_research_data │     |
-│ articles_by_topic │     |
-│ articles_by_year │      |
-│ evidence_score │        |
+│ stg_research_data │
+│ articles_by_topic │
+│ articles_by_year │
+│ evidence_score │
 └─────────────────────────┘
 ## ⚙️ Tech Stack
 
