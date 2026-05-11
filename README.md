@@ -62,3 +62,16 @@ Screen time research shows higher volume and citation impact compared to nutriti
 - Add Airflow for orchestration
 - Build dashboard (Power BI / Tableau)
 - Improve scoring model
+
+API (OpenAlex)
+   ↓
+Python (ingestion)
+   ↓
+BigQuery (raw: research_data)
+   ↓
+dbt
+ ├─ stg_research_data (staging)
+ └─ marts
+     ├─ articles_by_topic
+     ├─ articles_by_year
+     └─ evidence_score

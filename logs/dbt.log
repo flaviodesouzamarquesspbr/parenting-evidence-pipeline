@@ -188,3 +188,19 @@ Happy modeling!
 [0m16:45:30.121352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ee20f05c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ee1fd01210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70ee1fd00190>]}
 [0m16:45:30.122481 [debug] [MainThread]: Flushing usage events
 [0m16:45:30.748814 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:51:24.651772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4189c1cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea417818250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4178181f0>]}
+
+
+============================== 16:51:24.659002 | 43b1371f-f25a-4819-95df-00e6d7597794 ==============================
+[0m16:51:24.659002 [info ] [MainThread]: Running with dbt=1.11.9
+[0m16:51:24.660486 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/flavio/.dbt', 'indirect_selection': 'eager', 'printer_width': '80', 'static_parser': 'True', 'log_path': 'logs', 'introspect': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'write_json': 'True', 'fail_fast': 'False', 'version_check': 'True', 'target_path': 'None', 'partial_parse': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --select evidence_score', 'quiet': 'False'}
+[0m16:51:24.661500 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/flavio/Projects/parenting-evidence-pipeline/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:51:24.663347 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.14662912, "process_in_blocks": "5384", "process_kernel_time": 0.147877, "process_mem_max_rss": "98204", "process_out_blocks": "8", "process_user_time": 2.542885}
+[0m16:51:24.664840 [debug] [MainThread]: Command `dbt run` failed at 16:51:24.664536 after 0.15 seconds
+[0m16:51:24.666766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4189c1cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea417818970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea417818250>]}
+[0m16:51:24.668352 [debug] [MainThread]: Flushing usage events
+[0m16:51:25.291736 [debug] [MainThread]: An error was encountered while trying to flush usage events
