@@ -12,9 +12,18 @@ The goal is to transform raw academic data into actionable insights using modern
 
 ## 🧠 Architecture
 
-API → Python → BigQuery → dbt → Analytics Models
-
----
+API (OpenAlex)
+   ↓
+Python (ingestion)
+   ↓
+BigQuery (raw: research_data)
+   ↓
+dbt
+ ├─ stg_research_data (staging)
+ └─ marts
+     ├─ articles_by_topic
+     ├─ articles_by_year
+     └─ evidence_score
 
 ## ⚙️ Tech Stack
 
@@ -53,25 +62,18 @@ A custom Evidence Score was designed combining:
 
 ## 📈 Example Insight
 
-Screen time research shows higher volume and citation impact compared to nutrition topics.
+Screen time research demonstrates higher volume and citation impact compared to child nutrition, indicating stronger academic attention and influence.
 
 ---
+
+## 📊 Results & Data Preview
+
+![Articles by Topic](./images/articles_by_topic.png)
+![Articles by Year](./images/articles_by_year.png)
+![Evidence Score](./images/evidence_score.png)
 
 ## 📌 Future Improvements
 
 - Add Airflow for orchestration
 - Build dashboard (Power BI / Tableau)
 - Improve scoring model
-
-API (OpenAlex)
-   ↓
-Python (ingestion)
-   ↓
-BigQuery (raw: research_data)
-   ↓
-dbt
- ├─ stg_research_data (staging)
- └─ marts
-     ├─ articles_by_topic
-     ├─ articles_by_year
-     └─ evidence_score
