@@ -12,18 +12,28 @@ The goal is to transform raw academic data into actionable insights using modern
 
 ## 🧠 Architecture
 
-API (OpenAlex)
-   ↓
-Python (ingestion)
-   ↓
-BigQuery (raw: research_data)
-   ↓
-dbt
- ├─ stg_research_data (staging)
- └─ marts
-     ├─ articles_by_topic
-     ├─ articles_by_year
-     └─ evidence_score
+This architecture follows a modern ELT pattern using dbt for transformation and BigQuery as the analytical data warehouse.
+
+    ┌──────────────┐
+    │  OpenAlex API│
+    └──────┬───────┘
+           ↓
+    ┌──────────────┐
+    │   Python ETL │
+    │ (data fetch) │
+    └──────┬───────┘
+           ↓
+    ┌──────────────┐
+    │   BigQuery   │
+    │ (raw layer)  │
+    │ research_data│
+    └──────┬───────┘
+           ↓
+    ┌──────────────┐
+    │     dbt      │
+    │ transformation│
+    └──────┬───────┘
+           ↓
 
 ## ⚙️ Tech Stack
 
