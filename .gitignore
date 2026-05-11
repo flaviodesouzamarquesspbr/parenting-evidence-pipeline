@@ -1,0 +1,7 @@
+venv/
+venv_dbt/
+__pycache__/
+.env
+*.csv
+target/
+dbt_packages/
